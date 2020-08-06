@@ -19,8 +19,8 @@
   border: none;
   overflow: hidden;
   position: fixed;
-  left: 100%;
-  top: 50%;
+  left: 85%;
+  top: 65%;
   transform: translate(-50%, -50%);
   z-index: 1200;
   margin: 5px;
