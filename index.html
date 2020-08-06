@@ -106,7 +106,7 @@
 
         // create a session 
         function getNewSession() {
-            fetch('https://pure-tor-36404.herokuapp.com/session')
+            fetch('https://ancient-depths-74065.herokuapp.com/session')
                 .then(function (session) {
                     return session.json();
                 })
@@ -159,7 +159,7 @@
   <span class="sr-only">Loading...</span></span>`;
                     document.getElementById("userText").value = "";
 
-                    fetch("https://pure-tor-36404.herokuapp.com/virtech", {
+                    fetch("https://ancient-depths-74065.herokuapp.com/virtech", {
                         method: "post",
                         headers: {
                             "Content-type": "application/json"
