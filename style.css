@@ -28,9 +28,8 @@
   border: none;
   overflow: hidden;
   position: fixed;
-  left: 85%;
-  top: 65%;
-  transform: translate(-50%, -50%);
+  right:10px;
+  bottom:20px;   
   z-index: 1200;
   margin: 5px;
 }
