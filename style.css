@@ -28,8 +28,8 @@
   border: none;
   overflow: hidden;
   position: fixed;
-  right:10px;
-  bottom:20px;   
+  right: 10px;
+  bottom: 20px;
   z-index: 1200;
   margin: 5px;
 }
@@ -145,6 +145,7 @@
   align-self: flex-start;
   font-size: 1rem;
   border-radius: 1.125rem 1.3rem 1.3rem 0;
+  white-space: pre-line;
 }
 .chat-bot #userReplay {
   background: rgb(236 136 41);
