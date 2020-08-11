@@ -1,3 +1,13 @@
+.idle-msg {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.idle-msg a {
+  margin: 12px 12px 4px 12px;
+  display: inline-block;
+  color: #ff5722;
+}
 .banner img,
 .footer img,
 .header img,
