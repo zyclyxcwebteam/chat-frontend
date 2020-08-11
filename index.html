@@ -98,7 +98,7 @@
         function counter() {
             let distance = new Date().getTime() - startTime;
             idleTime = Math.floor((distance % (1000 * 60)) / 1000);
-            console.log(idleTime);
+            // console.log(idleTime);
             if (userIdle && idleTime === 40) {
                 document.getElementById("botMessages").innerHTML += `<p id="botReplay">أشكركم على الاتصال بنا! يرجى إعلامنا إذا كان لديك أي أسئلة عبر البريد الإلكتروني - xyz@simah.com</p>`;
                 let chatBot = document.getElementById("scroll");
@@ -109,7 +109,7 @@
             }
 
             if (idleTime === 20) {
-                console.log("you have reached 20 sec point");
+                // console.log("you have reached 20 sec point");
                 // if (userIdle) {
                 //     clearInterval(interval)
                 // }
@@ -129,7 +129,7 @@
             chatBot.scrollTop = chatBot.scrollHeight;
             let userInput = document.getElementById("userText");
             userInput.focus();
-            console.log(document.querySelector('#bot-yes'));
+            // console.log(document.querySelector('#bot-yes'));
             document.querySelector('#bot-yes').setAttribute("disabled", true);
             startTime = new Date().getTime();
             clearInterval(interval);
