@@ -1,14 +1,15 @@
-#bot-yes {
+#bot-yes,
+#bot-no {
   background-color: #ff5722;
   color: #fff;
   padding: 0.3rem 1rem;
   border-radius: 1rem;
 }
-#bot-no {
-  border: 1px solid #ff5722;
-  padding: 0.3rem 1.5rem;
-  border-radius: 1rem;
+#bot-yes:hover,
+#bot-no:hover {
+  background-color: hsl(14, 100%, 45%);
 }
+
 .idle-msg {
   display: flex;
   flex-direction: column;
