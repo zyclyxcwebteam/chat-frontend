@@ -1,3 +1,14 @@
+#bot-yes {
+  background-color: #ff5722;
+  color: #fff;
+  padding: 0.3rem 1rem;
+  border-radius: 1rem;
+}
+#bot-no {
+  border: 1px solid #ff5722;
+  padding: 0.3rem 1.5rem;
+  border-radius: 1rem;
+}
 .idle-msg {
   display: flex;
   flex-direction: column;
@@ -7,6 +18,9 @@
   margin: 12px 12px 4px 12px;
   display: inline-block;
   color: #ff5722;
+}
+.idle-msg span {
+  width: 100%;
 }
 .banner img,
 .footer img,
@@ -22,9 +36,9 @@
   color: #535a5f;
   font-weight: bolder;
 }
- .chat-bot {
+.chat-bot {
   display: none;
-} 
+}
 .input-group {
   padding: 1rem;
   background-color: #31658c0f;
@@ -157,7 +171,7 @@
   border-radius: 1.125rem 1.3rem 1.3rem 0;
   white-space: pre-line;
   direction: rtl;
-  text-align: right
+  text-align: right;
 }
 .chat-bot #userReplay {
   background: rgb(236 136 41);

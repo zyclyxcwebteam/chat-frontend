@@ -114,7 +114,7 @@
                 //     clearInterval(interval)
                 // }
                 userIdle = true;
-                document.getElementById("botMessages").innerHTML += `<p id="botReplay" class="idle-msg">هل لديك المزيد من الأسئلة لطرحها <br /> <span><a href="#" id="bot-yes" onclick="idleYes()">نعم</a><a href="#" id="bot-no" onclick="idleNo()">لا</a></span></p>`
+                document.getElementById("botMessages").innerHTML += `<p id="botReplay" class="idle-msg">هل لديك المزيد من الأسئلة لتطرحها؟<br /> <span><a href="#" id="bot-yes" onclick="idleYes()">نعم</a><a href="#" id="bot-no" onclick="idleNo()">لا</a></span></p>`
                 let chatBot = document.getElementById("scroll");
                 chatBot.scrollTop = chatBot.scrollHeight;
                 let userInput = document.getElementById("userText");
@@ -124,7 +124,7 @@
         }
 
         function idleYes(event) {
-            document.getElementById("botMessages").innerHTML += `<p id="botReplay">اسألنا إذا كان لديك أي أسئلة</p>`;
+            document.getElementById("botMessages").innerHTML += `<p id="botReplay">يرجى إخبارنا ، كيف يمكننا مساعدتك أكثر</p>`;
             let chatBot = document.getElementById("scroll");
             chatBot.scrollTop = chatBot.scrollHeight;
             let userInput = document.getElementById("userText");
