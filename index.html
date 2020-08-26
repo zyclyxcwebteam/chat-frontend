@@ -153,12 +153,13 @@
 
         // create a session 
         function getNewSession() {
-            fetch('https://ancient-depths-74065.herokuapp.com/session')
+            fetch('https://shielded-caverns-45561.herokuapp.com/session')
                 .then(function (session) {
                     return session.json();
                 })
                 .then(function (data) {
                     sessionID = data.session;
+                    console.log(sessionID)
                     let userInput = document.getElementById("userText")
                     userInput.removeAttribute("disabled");
                     document.querySelector('.sendBtn').removeAttribute("disabled");
@@ -205,7 +206,7 @@
   <span class="sr-only">Loading...</span></span>`;
                     document.getElementById("userText").value = "";
 
-                    fetch("https://ancient-depths-74065.herokuapp.com/virtech", {
+                    fetch("https://shielded-caverns-45561.herokuapp.com/virtech", {
                         method: "post",
                         headers: {
                             "Content-type": "application/json"
