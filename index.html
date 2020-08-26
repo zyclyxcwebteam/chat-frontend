@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SIMAH - chatbot</title>
+    <title>Chat Assistant</title>
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
@@ -12,18 +12,7 @@
 </head>
 
 <body>
-    <header class="header">
-        <img src="./header.PNG" class="logo" />
-    </header>
-    <div class="banner">
-        <img src="./banner.PNG" alt="">
-    </div>
-    <div class="products">
-        <img src="./products.PNG" alt="">
-    </div>
-    <div class="footer">
-        <img src="./footer.PNG" alt="">
-    </div>
+
     <button type="button" class="btn btn-rounded text-center bot" id="chat" aria-label="chat" onclick="show(1)">
         <svg height="30" width="30" aria-hidden="true" data-prefix="fab" data-icon="rocketchat"
             class="svg-inline--fa fa-rocketchat fa-w-18" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
@@ -35,7 +24,7 @@
         <div id="box1" class="chat-bot">
             <div class="card shadow" id="bot">
                 <div id="close" class="card-header d-flex justify-content-between py-3">
-                    SIMAH
+                    Chat Assistant
                     <button type="button" class="btn close" aria-label="Close" onclick="show(0)">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
@@ -48,7 +37,7 @@
 
                 <div class="card-body chatBot py-3" id="scroll">
                     <div class="reply-messages" id="botMessages">
-                        <p id="botReplay">أهلا وسهلا بك إلى سمة</p>
+                        <p id="botReplay">Welcome</p>
                     </div>
                 </div>
                 <div class="card-footer p-0 bottom-fixed">
@@ -99,52 +88,52 @@
             let distance = new Date().getTime() - startTime;
             idleTime = Math.floor((distance % (1000 * 60)) / 1000);
             // console.log(idleTime);
-            if (userIdle && idleTime === 40) {
-                document.getElementById("botMessages").innerHTML += `<p id="botReplay">أشكركم على الاتصال بنا! يرجى إعلامنا إذا كان لديك أي أسئلة عبر البريد الإلكتروني - xyz@simah.com</p>`;
-                let chatBot = document.getElementById("scroll");
-                chatBot.scrollTop = chatBot.scrollHeight;
-                let userInput = document.getElementById("userText");
-                userInput.focus();
-                clearInterval(interval)
-            }
+            // if (userIdle && idleTime === 40) {
+            //     document.getElementById("botMessages").innerHTML += `<p id="botReplay">أشكركم على الاتصال بنا! يرجى إعلامنا إذا كان لديك أي أسئلة عبر البريد الإلكتروني - xyz@simah.com</p>`;
+            //     let chatBot = document.getElementById("scroll");
+            //     chatBot.scrollTop = chatBot.scrollHeight;
+            //     let userInput = document.getElementById("userText");
+            //     userInput.focus();
+            //     clearInterval(interval)
+            // }
 
             if (idleTime === 20) {
                 // console.log("you have reached 20 sec point");
                 // if (userIdle) {
                 //     clearInterval(interval)
                 // }
-                userIdle = true;
-                document.getElementById("botMessages").innerHTML += `<p id="botReplay" class="idle-msg">هل لديك المزيد من الأسئلة لتطرحها؟<br /> <span><a href="#" id="bot-yes" onclick="idleYes()">نعم</a><a href="#" id="bot-no" onclick="idleNo()">لا</a></span></p>`
-                let chatBot = document.getElementById("scroll");
-                chatBot.scrollTop = chatBot.scrollHeight;
-                let userInput = document.getElementById("userText");
-                userInput.focus();
+                // userIdle = true;
+                // document.getElementById("botMessages").innerHTML += `<p id="botReplay" class="idle-msg">هل لديك المزيد من الأسئلة لتطرحها؟<br /> <span><a href="#" id="bot-yes" onclick="idleYes()">نعم</a><a href="#" id="bot-no" onclick="idleNo()">لا</a></span></p>`
+                // let chatBot = document.getElementById("scroll");
+                // chatBot.scrollTop = chatBot.scrollHeight;
+                // let userInput = document.getElementById("userText");
+                // userInput.focus();
             }
 
         }
 
         function idleYes(event) {
-            document.getElementById("botMessages").innerHTML += `<p id="botReplay">من فضلك أخبرنا كيف يمكننا مساعدتك؟</p>`;
-            let chatBot = document.getElementById("scroll");
-            chatBot.scrollTop = chatBot.scrollHeight;
-            let userInput = document.getElementById("userText");
-            userInput.focus();
-            // console.log(document.querySelector('#bot-yes'));
-            document.querySelector('#bot-yes').setAttribute("disabled", true);
-            startTime = new Date().getTime();
-            clearInterval(interval);
-            interval = setInterval(counter, 1000);
+            // // document.getElementById("botMessages").innerHTML += `<p id="botReplay">من فضلك أخبرنا كيف يمكننا مساعدتك؟</p>`;
+            // let chatBot = document.getElementById("scroll");
+            // chatBot.scrollTop = chatBot.scrollHeight;
+            // let userInput = document.getElementById("userText");
+            // userInput.focus();
+            // // console.log(document.querySelector('#bot-yes'));
+            // document.querySelector('#bot-yes').setAttribute("disabled", true);
+            // startTime = new Date().getTime();
+            // clearInterval(interval);
+            // interval = setInterval(counter, 1000);
         }
 
         function idleNo() {
-            document.getElementById("botMessages").innerHTML += `<p id="botReplay">شكرًا على تواصلك معنا ، يرجى إعلامنا إذا كان لديك أي أسئلة عبر البريد الإلكتروني - xyz@imah.com</p>`;
-            let chatBot = document.getElementById("scroll");
-            chatBot.scrollTop = chatBot.scrollHeight;
-            let userInput = document.getElementById("userText");
-            userInput.focus();
-            startTime = new Date().getTime();
-            clearInterval(interval);
-            interval = setInterval(counter, 1000);
+            // document.getElementById("botMessages").innerHTML += `<p id="botReplay">شكرًا على تواصلك معنا ، يرجى إعلامنا إذا كان لديك أي أسئلة عبر البريد الإلكتروني - xyz@imah.com</p>`;
+            // let chatBot = document.getElementById("scroll");
+            // chatBot.scrollTop = chatBot.scrollHeight;
+            // let userInput = document.getElementById("userText");
+            // userInput.focus();
+            // startTime = new Date().getTime();
+            // clearInterval(interval);
+            // interval = setInterval(counter, 1000);
         }
 
         fetch('https://pure-tor-36404.herokuapp.com/')
